@@ -2,16 +2,19 @@
   {
     "title": "påskespillet",
     "describtion": "the easter game. a project that i made on the first semester of my education. illustrations are made in adobe illustrator and the game is programmed and animated with javaScript, CSS and HTML. ",
-    "knap": "play"
+    "knap": "play",
+    "link": "https://jenniferjaque.dk/kea/02-animation/spil/"
   },
   {
     "title": "portfolio v1",
     "describtion": "this is my portfolio site from the first semester of my education. it shows all the works i did on the first semester. the website is build with HTML, CSS and javaScript and graphics in adobe illustrator. ",
-    "knap": "visit site"
+    "knap": "visit site",
+    "link": "https://jenniferjaque.dk/kea/portfolio/"
   },
   {
     "title": "museum of technology infoscreen",
     "describtion": "this is a project that i did for the danish museum of technology. it is an interactive infoscreen that shows the user how the invention of the light bulb has changed the world. the idea was to have this as a part of an exhibition at the museum about this topic. ",
-    "knap": "try infoscreen"
+    "knap": "try infoscreen",
+    "link": "https://jenniferjaque.dk/kea/3-semester/aa/lightbulb_project/"
   }
 ]
