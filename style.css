@@ -42,6 +42,8 @@ p {
   height: calc(100vh - 50px);
 }
 
+/** navigation **/
+
 nav {
   width: 100vw;
   height: 30px;
@@ -75,6 +77,8 @@ nav a:hover {
   border-radius: 20px;
 }
 
+/** section 1 / splash **/
+
 #section1 {
   /* background-color: var(--colorone); */
   width: 100vw;
@@ -90,11 +94,25 @@ nav a:hover {
   color: var(--colortwo);
 }
 
+#shape1 {
+  background-image: url(svg/shape.svg);
+  background-size: 100%;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 180px;
+  left: 300px;
+}
+
+/** section 2 **/
+
 #section2 {
   background-color: var(--colortwo);
   width: 100vw;
   height: 400px;
 }
+
+/** section 3 **/
 
 #section3 {
   background-color: var(--colorthree);
@@ -111,16 +129,6 @@ nav a:hover {
 .work:hover {
   color: var(--colortwo);
   cursor: pointer;
-}
-
-#shape1 {
-  background-image: url(svg/shape.svg);
-  background-size: 100%;
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  top: 180px;
-  left: 300px;
 }
 
 #works_info {

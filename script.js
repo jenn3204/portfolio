@@ -8,11 +8,8 @@ function start() {
 }
 
 function scrolling() {
-  console.log("scrollig");
+  // scroll bar
   let scrollContainer = document.querySelector("#scroll_container");
   let ratio = scrollContainer.scrollTop / (scrollContainer.scrollHeight - scrollContainer.clientHeight);
-  console.log(ratio);
-
   document.querySelector("#scroll_bar").style.left = ratio * 98 + "vw";
-  console.log("hej");
 }
