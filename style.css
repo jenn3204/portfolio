@@ -1,0 +1,136 @@
+:root {
+  --colorone: #0f3445;
+  --colortwo: #e8e4d0;
+  --colorthree: #5a1a2b;
+  --headlinefont: "Abril Fatface", cursive;
+  --mainfont: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+h1 {
+  font-family: var(--headlinefont);
+  font-size: 4rem;
+  line-height: 1;
+}
+
+h2 {
+  font-family: var(--headlinefont);
+  font-size: 2rem;
+  line-height: 0.9;
+}
+
+h3 {
+  font-family: var(--headlinefont);
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: var(--mainfont);
+}
+
+#scroll_container {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: calc(100vh - 50px);
+}
+
+nav {
+  width: 100vw;
+  height: 30px;
+  background-color: var(--colorone);
+  padding: 10px 0 5px 0px;
+}
+
+nav a {
+  color: white;
+  font-family: var(--mainfont);
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: var(--colortwo);
+}
+
+#scroll_info {
+  width: 100vw;
+  height: 3px;
+  background-color: var(--colorone);
+  position: relative;
+}
+
+#scroll_bar {
+  background-color: white;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  border-radius: 20px;
+}
+
+#section1 {
+  /* background-color: var(--colorone); */
+  width: 100vw;
+  background-image: url(svg/slash1.png);
+  background-size: 100%;
+  position: relative;
+}
+
+#splash_txt {
+  position: absolute;
+  top: 10vh;
+  left: 20vw;
+  color: var(--colortwo);
+}
+
+#section2 {
+  background-color: var(--colortwo);
+  width: 100vw;
+  height: 400px;
+}
+
+#section3 {
+  background-color: var(--colorthree);
+  width: 100vw;
+  height: 400px;
+  color: white;
+}
+
+.work {
+  line-height: 3;
+  width: 300px;
+}
+
+.work:hover {
+  color: var(--colortwo);
+  cursor: pointer;
+}
+
+#shape1 {
+  background-image: url(svg/shape.svg);
+  background-size: 100%;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 180px;
+  left: 300px;
+}
+
+#works_info {
+  border: 2px solid black;
+  width: 390px;
+  padding: 20px;
+}
+
+#knap1 {
+  border: 2px solid white;
+  width: 100px;
+  height: 40px;
+}
