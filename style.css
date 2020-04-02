@@ -84,19 +84,25 @@ nav a:active {
 
 #scroll_bar {
   background-color: white;
-  width: 40px;
+  width: 5vw;
   height: 3px;
   position: absolute;
   border-radius: 20px;
 }
 
+/** classes **/
+
+.hide {
+  display: none;
+}
+
 /** section 1 / splash **/
 
 #section1 {
-  /* background-color: var(--colorone); */
+  background-color: var(--colorone);
   width: 100vw;
-  background-image: url(svg/slash1.png);
-  background-size: 100%;
+  /* background-image: url(svg/slash1.png);
+  background-size: 100%; */
   position: relative;
 }
 
@@ -108,13 +114,11 @@ nav a:active {
 }
 
 #shape1 {
-  background-image: url(svg/shape.svg);
-  background-size: 100%;
-  height: 300px;
-  width: 300px;
+  height: 20vh;
+  width: 20vw;
   position: absolute;
   top: 180px;
-  left: 300px;
+  left: 350px;
 }
 
 /** section 2 **/
