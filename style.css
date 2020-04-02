@@ -20,6 +20,13 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+p {
+  z-index: 2000;
+}
+
 h1 {
   font-family: var(--headlinefont);
   font-size: 4rem;
@@ -96,29 +103,88 @@ nav a:active {
   display: none;
 }
 
+.bubbly {
+  animation: bubbly 60s infinite ease;
+}
+
+@keyframes bubbly {
+  0% {
+    transform: translateX(1) translateY(1) rotate(0);
+    transform-origin: center center;
+  }
+  25% {
+    transform: scaleX(1.03) scaleY(0.9) rotate(90deg);
+    transform-origin: center center;
+  }
+  50% {
+    transform: scaleX(0.8) scaleY(1.09) rotate(180deg);
+    transform-origin: center center;
+  }
+  100% {
+    transform: translateX(1) translateY(1) rotate(360deg);
+    transform-origin: center center;
+  }
+}
+
+.rotate {
+  animation: rotate 10s infinite linear;
+  transform-origin: center center;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dontshowit {
+  display: none;
+}
+
+.showit {
+  animation: showit 1s 1 ease;
+}
+
+@keyframes showit {
+  0% {
+    height: 0;
+    display: none;
+  }
+  50% {
+    height: 500px;
+  }
+  100% {
+    display: block;
+  }
+}
+
 /** section 1 / splash **/
 
 #section1 {
   background-color: var(--colorone);
   width: 100vw;
-  /* background-image: url(svg/slash1.png);
-  background-size: 100%; */
   position: relative;
+  /* height: 100vh; */
 }
 
 #splash_txt {
   position: absolute;
-  top: 10vh;
-  left: 20vw;
+  top: 5vh;
+  left: 5vw;
   color: var(--colortwo);
+  z-index: 100;
 }
 
 #shape1 {
-  height: 20vh;
-  width: 20vw;
+  height: 50vh;
+  width: 50vw;
   position: absolute;
-  top: 180px;
-  left: 350px;
+  top: 10px;
+  left: 10px;
+}
+
+#shape1 svg g path {
+  stroke: black;
 }
 
 /** section 2 **/
@@ -134,8 +200,29 @@ nav a:active {
 #section3 {
   background-color: var(--colorthree);
   width: 100vw;
-  height: 400px;
+  height: 80vh;
   color: white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 100px 0 100px 0;
+  flex-wrap: wrap;
+}
+
+#works_container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+#shape3 {
+  width: 200px;
+}
+
+#shape3 svg g path {
+  stroke: black;
+  stroke-width: 10;
 }
 
 .work {
@@ -149,9 +236,12 @@ nav a:active {
 }
 
 #works_info {
-  border: 1px solid black;
   width: 390px;
   padding: 20px;
+}
+
+#works_info p {
+  margin-bottom: 20px;
 }
 
 #knap {
@@ -164,4 +254,27 @@ nav a:active {
 #knap:active {
   background-color: var(--colortwo);
   color: black;
+}
+
+/** footer **/
+
+footer {
+  background-color: var(--colorone);
+  width: 100vw;
+  text-align: center;
+  color: white;
+}
+
+/** media queries **/
+
+@media only screen and (min-width: 700px) {
+  #splash_txt {
+    top: 15vh;
+    left: 20vw;
+  }
+
+  #shape1 {
+    top: 0;
+    left: 40px;
+  }
 }

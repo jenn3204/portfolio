@@ -3,18 +3,27 @@
     "title": "påskespillet",
     "describtion": "the easter game. a project that i made on the first semester of my education. illustrations are made in adobe illustrator and the game is programmed and animated with javaScript, CSS and HTML. ",
     "knap": "play",
-    "link": "https://jenniferjaque.dk/kea/02-animation/spil/"
+    "link": "https://jenniferjaque.dk/kea/02-animation/spil/",
+    "billede": "png/paaskespil.png",
+    "alt": "easter game",
+    "movie": "video/paaske_video.mp4"
   },
   {
     "title": "portfolio v1",
     "describtion": "this is my portfolio site from the first semester of my education. it shows all the works i did on the first semester. the website is build with HTML, CSS and javaScript and graphics in adobe illustrator. ",
     "knap": "visit site",
-    "link": "https://jenniferjaque.dk/kea/portfolio/"
+    "link": "https://jenniferjaque.dk/kea/portfolio/",
+    "billede": "png/portfoliov1.png",
+    "alt": "portfolio v1",
+    "movie": "video/portfolio_video.mp4"
   },
   {
     "title": "museum of technology infoscreen",
     "describtion": "this is a project that i did for the danish museum of technology. it is an interactive infoscreen that shows the user how the invention of the light bulb has changed the world. the idea was to have this as a part of an exhibition at the museum about this topic. ",
     "knap": "try infoscreen",
-    "link": "https://jenniferjaque.dk/kea/3-semester/aa/animation_project/"
+    "link": "https://jenniferjaque.dk/kea/3-semester/aa/animation_project/",
+    "billede": "png/museum.png",
+    "alt": "infoscreen",
+    "movie": "video/museum_video.mp4"
   }
 ]
