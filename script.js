@@ -9,6 +9,10 @@ function start() {
   document.querySelector("#scroll_container").addEventListener("scroll", scrolling);
   document.querySelector("#svg_blue").addEventListener("mousemove", moveMouse);
 
+  document.querySelector("#section1").addEventListener("click", function() {
+    document.querySelector("#clipCircle").style.r = "2000";
+  });
+
   getSvg("svg/shape.svg", placeShape1);
   getSvg("svg/shape.svg", placeShape3);
   getJson("data.json");
@@ -57,10 +61,6 @@ function moveMouse(e) {
   document.querySelector("#clipCircle").setAttribute("cx", (e.pageX / window.innerWidth) * 1920);
   document.querySelector("#clipCircle").setAttribute("cy", (e.pageY / window.innerHeight) * 1920 * (window.innerHeight / window.innerWidth));
   e.preventDefault();
-
-  document.querySelector("#section1").addEventListener("click", function() {
-    document.querySelector("#clipCircle").style.r = "2000";
-  });
 }
 
 function showPaaske() {
