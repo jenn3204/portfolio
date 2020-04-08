@@ -25,5 +25,9 @@
     "billede": "png/museum.png",
     "alt": "infoscreen",
     "movie": "video/museum_video.mp4"
+  },
+  {
+    "title": "about",
+    "describtion": "hello, my name is jennifer. i am 27 years old and i live in valby, copenhagen. i am currently a student at the copenhagen school of technology and design (KEA) studying to be a multimedia designer with a focus on front-end development. "
   }
 ]

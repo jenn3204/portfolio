@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179 127">
+  <defs>
+    <style>
+      .arrow_cls-1 {
+        fill: #0f3445;
+        stroke: #0f3445;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <title>arrow</title>
+  <g id="Layer_4" data-name="Layer 4">
+    <g>
+      <path class="arrow_cls-1" d="M111.65,82.66c-16.19-1.37-33.52-2.18-51.86-2.16-17.95,0-34.91.82-50.79,2.16A110.83,110.83,0,0,0,10.44,65,112.16,112.16,0,0,0,9,46.87C25.19,48.23,42.52,49,60.87,49c17.94,0,34.9-.82,50.78-2.16Z"/>
+      <path class="arrow_cls-1" d="M106,109c4.88-11,5.06-19.24,4.34-24.68C109.22,76,106,74,105.58,65.17s2.65-11.48,3.39-20.79c.41-5.32.1-13.24-3.8-23.38L170,62.56Z"/>
+    </g>
+  </g>
+</svg>
