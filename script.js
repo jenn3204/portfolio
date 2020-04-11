@@ -62,10 +62,22 @@ function placeShapes(svg) {
 
 function placeSkills(svg) {
   document.querySelector("#skills_svg").innerHTML = svg;
+
+  document.querySelector("#indesign").classList.add("wubbly");
+  document.querySelector("#css").classList.add("wubbly");
+  document.querySelector("#html").classList.add("wubbly");
+  document.querySelector("#javascript").classList.add("wubbly");
+  document.querySelector("#illustrator").classList.add("wubbly");
+  document.querySelector("#premiere").classList.add("wubbly");
+  document.querySelector("#xd").classList.add("wubbly");
+  document.querySelector("#photoshop").classList.add("wubbly");
+  document.querySelector("#blue_shape").classList.add("wubbly");
 }
 
 function placeArrows(svg) {
   document.querySelector("#arrow1").innerHTML = svg;
+
+  document.querySelector("#arrow1").classList.add("pulse");
 }
 
 function scrolling() {

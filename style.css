@@ -46,6 +46,7 @@ h3 {
 
 p {
   font-family: var(--mainfont);
+  font-weight: bold;
 }
 
 #scroll_container {
@@ -126,6 +127,49 @@ nav a:active {
   }
 }
 
+.pulse {
+  animation: pulse 2s infinite ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+  50% {
+    transform: scale(1.03) translateY(5px);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+  }
+}
+
+.wubbly {
+  animation: wubbly 10s infinite ease;
+}
+
+@keyframes wubbly {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    transform-origin: center center;
+  }
+  25% {
+    transform: scaleX(1.01) scaleY(0.99);
+    transform-origin: center center;
+  }
+  50% {
+    transform: scaleX(0.98) scaleY(1.01);
+    transform-origin: center center;
+  }
+  75% {
+    transform: scaleX(1) scaleY(0.99);
+    transform-origin: center center;
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+    transform-origin: center center;
+  }
+}
+
 .rotate {
   animation: rotate 10s infinite linear;
   transform-origin: center center;
@@ -170,7 +214,6 @@ nav a:active {
   background-color: var(--colorone);
   width: 100vw;
   position: relative;
-  /* height: 100vh; */
   cursor: pointer;
 }
 
@@ -199,21 +242,23 @@ nav a:active {
 #section2 {
   background-color: var(--colortwo);
   width: 100vw;
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
+  height: 1200px;
+  /* display: flex;
+  flex-direction: column;
+  overflow: visible;
+  /* overflow-x: scroll;
+  scroll-behavior: smooth; */ */
 }
 
 #section2_1,
 #section2_2 {
-  padding: 0 30vw;
+  padding: 0 10vw;
 }
 
 #section2_about {
   position: relative;
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
   margin: 0 auto;
 }
 
@@ -224,7 +269,7 @@ nav a:active {
 
 #section2_about p {
   position: absolute;
-  width: 300px;
+  width: 250px;
   top: 100px;
   right: 0;
 }
@@ -242,29 +287,62 @@ nav a:active {
   top: 10vh;
 }
 
-#shape2 svg g path {
+#shape2 svg g path,
+#shape2_2 svg g path {
   stroke: var(--colorthree);
   stroke-width: 1;
 }
 
-#section2_skills {
-  position: relative;
-  width: 600px;
-}
-
-#skills_svg {
-  width: 500px;
-}
-
 .arrow {
-  width: 70px;
+  width: 50px;
 }
 
 #arrow1 {
   position: absolute;
-  top: 200px;
-  left: 700px;
+  top: 400px;
+  left: 200px;
   cursor: pointer;
+}
+
+#section2_skills {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#section2_skills h3 {
+  position: absolute;
+  top: 10vh;
+}
+
+#skills_svg {
+  width: 400px;
+  position: absolute;
+  top: 8vh;
+}
+
+#css {
+  animation-delay: 1s;
+}
+
+#javascript {
+  animation-delay: 3s;
+}
+
+#illustrator {
+  animation-delay: 1.5s;
+}
+
+#photoshop {
+  animation-delay: 3.5s;
+}
+
+#xd {
+  animation-delay: 1.2s;
+}
+
+#premiere {
+  animation-delay: 2.8s;
 }
 
 /** section 3 **/
@@ -272,7 +350,6 @@ nav a:active {
 #section3 {
   background-color: var(--colorthree);
   width: 100vw;
-  height: 80vh;
   color: white;
   position: relative;
   display: flex;
@@ -348,5 +425,29 @@ footer {
   #shape1 {
     top: 0;
     left: 40px;
+  }
+
+  #section2_about {
+    width: 600px;
+  }
+
+  #section2_about p {
+    width: 400px;
+  }
+
+  #section2_about img {
+    width: 400px;
+  }
+
+  #shape2 {
+    width: 400px;
+  }
+
+  #section2_skills {
+    width: 600px;
+  }
+
+  #section2_skills svg {
+    width: 600px;
   }
 }
