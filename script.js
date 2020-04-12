@@ -60,6 +60,7 @@ function checkScreenSize() {
 
 function burgerMenu() {
   // document.querySelector("#menu").classList.toggle("hidden");
+  document.querySelector("#menu").classList.remove("hide");
   document.querySelector("#menu").classList.toggle("showopacity3");
   document.querySelector("#menu").classList.toggle("hideopacity2");
 
