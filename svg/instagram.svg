@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 872 906">
+  <defs>
+    <style>
+      .instagram-cls-1 {
+        fill: #5a1a2b;
+        opacity: 0.8;
+      }
+
+      .instagram-cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 26px;
+      }
+    </style>
+  </defs>
+  <title>instagram</title>
+  <g id="Layer_8" data-name="Layer 8">
+    <g id="instagram">
+      <path class="instagram-cls-1" d="M786.86,412.12c-22.94,45.67-47.26,47.3-58,91.5-18.32,75.44,42.84,110.61,34,187-6.61,57.19-50.44,119.94-106,139-79.87,27.4-118.6-57.93-268-82-122.2-19.69-152.25,28.39-235-9-68.09-30.77-139.43-104.75-139-183,.43-77.12,70.16-87.06,101-201,25-92.24-12.54-116,14-177,47.6-109.44,205.1-187.48,290-144,60.95,31.21,40.34,102.55,105,137,87.79,46.77,177-57.44,243-13C826.51,197.11,828.9,328.44,786.86,412.12Z"/>
+      <rect class="instagram-cls-2" x="187" y="290" width="462" height="360" rx="12"/>
+      <circle class="instagram-cls-2" cx="408" cy="486" r="112"/>
+      <circle cx="538" cy="357" r="19"/>
+    </g>
+  </g>
+</svg>

@@ -59,7 +59,7 @@ p {
 
 header {
   width: 100vw;
-  height: 30px;
+  height: 35px;
   background-color: var(--colorone);
   padding: 10px 0 5px 0px;
   display: flex;
@@ -71,7 +71,7 @@ nav {
   height: 50vh;
   display: flex;
   flex-direction: column;
-  z-index: 2000;
+  z-index: 3000;
   background-color: var(--colorone);
 }
 
@@ -81,7 +81,8 @@ nav {
   position: absolute;
   top: 5px;
   right: 5px;
-  z-index: 3000;
+  z-index: 4000;
+  color: var(--colortwo);
 }
 
 #logo {
@@ -91,14 +92,16 @@ nav {
   width: 45px;
   margin-right: 20px;
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: 5px;
-  z-index: 3000;
+  z-index: 4000;
 }
 
 nav a {
   color: white;
   padding: 10px;
+  margin: 0 auto;
+  font-size: 2rem;
 }
 
 nav a:hover,
@@ -320,6 +323,22 @@ footer {
   width: 100vw;
   text-align: center;
   color: white;
+  padding: 10px 0;
+}
+#in_logo svg,
+#insta_logo svg {
+  width: 50px;
+  margin: 5px 0;
+}
+
+#linkedin > path,
+#instagram > path {
+  fill: var(--colorone);
+}
+
+#linkedin > path:hover,
+#instagram > path:hover {
+  fill: var(--colortwo);
 }
 
 /** media queries **/
@@ -330,6 +349,11 @@ footer {
     height: 30px;
     visibility: visible;
     justify-content: flex-end;
+  }
+
+  #menu a {
+    font-size: 1rem;
+    margin: 0;
   }
 
   #burger_button {
@@ -368,6 +392,10 @@ footer {
 
   #section2_skills svg {
     width: 600px;
+  }
+
+  #section3 {
+    height: 70vh;
   }
 }
 
@@ -425,7 +453,7 @@ footer {
 }
 
 .wubbly {
-  animation: wubbly 10s infinite ease;
+  animation: wubbly 5s infinite ease;
 }
 
 @keyframes wubbly {
@@ -491,6 +519,21 @@ footer {
   }
 }
 
+.showopacity3 {
+  animation: showopacity3 0.5s 1 ease;
+}
+
+@keyframes showopacity3 {
+  0% {
+    opacity: 0%;
+    transform: translateY(-300px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
 .hideopacity {
   animation: hideopacity 0.5s 1 ease;
   animation-fill-mode: forwards;
@@ -502,5 +545,21 @@ footer {
   }
   100% {
     opacity: 0%;
+  }
+}
+
+.hideopacity2 {
+  animation: hideopacity2 0.5s 1 ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideopacity2 {
+  0% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 80%;
+    transform: translateY(-500px);
   }
 }

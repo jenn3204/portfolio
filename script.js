@@ -1,12 +1,16 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", start);
+window.addEventListener("resize", checkScreenSize);
 
 let jsonData = [];
 let splashClicked = false;
 
 function start() {
   console.log("start");
+
+  checkScreenSize();
+
   document.querySelector("#splash_txt").classList.add("showopacity2");
   document.querySelector("#section2_about").classList.add("hide");
   document.querySelector("#section2_skills").classList.add("hide");
@@ -30,12 +34,9 @@ function start() {
   getSvg("svg/shape.svg", placeShapes);
   getSvg("svg/skills.svg", placeSkills);
   getSvg("svg/arrow.svg", placeArrows);
+  getSvg("svg/linkedin.svg", placeInLink);
+  getSvg("svg/instagram.svg", placeInstaLink);
   getJson("data.json");
-
-  if (window.innerWidth < "700") {
-    document.querySelector("#clipCircle").style.r = "2000";
-    document.querySelector("#section1").style.height = "70vh";
-  }
 
   document.querySelector("#works_info").classList.add("hide");
   document.querySelector("#paaske").addEventListener("click", showPaaske);
@@ -44,24 +45,45 @@ function start() {
   document.querySelector("#close").addEventListener("click", closeWork);
 }
 
-function burgerMenu() {
-  document.querySelector("#menu").classList.toggle("hidden");
-  document.querySelector("#menu").classList.toggle("showopacity");
+function checkScreenSize() {
+  if (window.innerWidth > "700") {
+    document.querySelector("#menu").classList = "";
+    document.querySelector("#section1").style.height = "";
+  }
 
-  let menuHidden = document.querySelector("#menu").classList.contains("hidden");
+  if (window.innerWidth < "700") {
+    document.querySelector("#clipCircle").style.r = "2000";
+    document.querySelector("#section1").style.height = "70vh";
+    document.querySelector("#menu").classList.add("hideopacity2");
+  }
+}
+
+function burgerMenu() {
+  // document.querySelector("#menu").classList.toggle("hidden");
+  document.querySelector("#menu").classList.toggle("showopacity3");
+  document.querySelector("#menu").classList.toggle("hideopacity2");
+
+  let menuHidden = document.querySelector("#menu").classList.contains("hideopacity2");
 
   if (menuHidden == true) {
     document.querySelector("#burger_button").textContent = "☰";
   } else {
     document.querySelector("#burger_button").textContent = "X";
   }
+
+  document.querySelectorAll("#menu a").forEach((a) => {
+    a.addEventListener("click", function () {
+      document.querySelector("#menu").classList.add("hideopacity2");
+      document.querySelector("#burger_button").textContent = "☰";
+    });
+  });
 }
 
 async function getJson(file) {
   let response = await fetch(file);
   jsonData = await response.json();
 
-  document.querySelector("#section2_about p").textContent = jsonData[3].describtion;
+  document.querySelector("#section2_about p").innerHTML = jsonData[3].describtion;
 }
 
 async function getSvg(file, callback) {
@@ -98,6 +120,14 @@ function placeArrows(svg) {
   document.querySelector("#arrow1").innerHTML = svg;
 
   document.querySelector("#arrow1").classList.add("pulse");
+}
+
+function placeInstaLink(svg) {
+  document.querySelector("#insta_logo").innerHTML = svg;
+}
+
+function placeInLink(svg) {
+  document.querySelector("#in_logo").innerHTML = svg;
 }
 
 function scrolling() {
@@ -150,6 +180,7 @@ function showPaaske() {
   document.querySelector("#works_info p").textContent = jsonData[0].describtion;
   document.querySelector("#works_info #knap").textContent = jsonData[0].knap;
   document.querySelector("#works_info #knap").href = jsonData[0].link;
+  document.querySelector("#works_info #video_link").href = jsonData[0].link;
   document.querySelector("#works_video").src = jsonData[0].movie;
 }
 
@@ -164,6 +195,7 @@ function showPort() {
   document.querySelector("#works_info p").textContent = jsonData[1].describtion;
   document.querySelector("#works_info #knap").textContent = jsonData[1].knap;
   document.querySelector("#works_info #knap").href = jsonData[1].link;
+  document.querySelector("#works_info #video_link").href = jsonData[1].link;
   document.querySelector("#works_video").src = jsonData[1].movie;
 }
 
@@ -179,11 +211,11 @@ function showMuseum() {
   document.querySelector("#works_info p").textContent = jsonData[2].describtion;
   document.querySelector("#works_info #knap").textContent = jsonData[2].knap;
   document.querySelector("#works_info #knap").href = jsonData[2].link;
+  document.querySelector("#works_info #video_link").href = jsonData[2].link;
   document.querySelector("#works_video").src = jsonData[2].movie;
 }
 
 function closeWork() {
   document.querySelector("#works_info").classList = "";
   document.querySelector("#works_info").classList.add("hideopacity");
-  document.querySelector("#works_info").classList.add("hide");
 }
