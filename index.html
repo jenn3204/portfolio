@@ -14,13 +14,17 @@
   </head>
   <body>
     <main>
-      <nav>
+      <header>
         <div id="logo"></div>
-        <a href="#section1">home</a>
-        <a href="#section2">about</a>
-        <a href="#section3">works</a>
-        <a href="#footer">contact</a>
-      </nav>
+        <div id="burger_button">☰</div>
+        <nav id="menu" class="hidden">
+          <a href="#section1">home</a>
+          <a href="#section2">about</a>
+          <a href="#section3">works</a>
+          <a href="#footer">contact</a>
+        </nav>
+      </header>
+
       <div id="scroll_info">
         <div id="scroll_bar"></div>
       </div>
@@ -35,7 +39,7 @@
           <svg viewBox="0 0 1920 1080">
             <image id="svg_blue" href="png/splash.png" width="1920" height="1080" clip-path="url(#clipPath)"></image>
             <clipPath id="clipPath">
-              <circle id="clipCircle" cx="1100" cy="500" r="200"></circle>
+              <circle id="clipCircle" cx="1300" cy="400" r="200"></circle>
             </clipPath>
           </svg>
           <div id="shape1"></div>

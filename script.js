@@ -7,6 +7,13 @@ let splashClicked = false;
 
 function start() {
   console.log("start");
+  document.querySelector("#splash_txt").classList.add("showopacity2");
+  document.querySelector("#section2_about").classList.add("hide");
+  document.querySelector("#section2_skills").classList.add("hide");
+  document.querySelector("#works_container").classList.add("transparent");
+
+  document.querySelector("#burger_button").addEventListener("click", burgerMenu);
+
   document.querySelector("#scroll_container").addEventListener("scroll", scrolling);
   document.querySelector("#svg_blue").addEventListener("mousemove", moveMouse);
 
@@ -35,6 +42,19 @@ function start() {
   document.querySelector("#port").addEventListener("click", showPort);
   document.querySelector("#museum").addEventListener("click", showMuseum);
   document.querySelector("#close").addEventListener("click", closeWork);
+}
+
+function burgerMenu() {
+  document.querySelector("#menu").classList.toggle("hidden");
+  document.querySelector("#menu").classList.toggle("showopacity");
+
+  let menuHidden = document.querySelector("#menu").classList.contains("hidden");
+
+  if (menuHidden == true) {
+    document.querySelector("#burger_button").textContent = "☰";
+  } else {
+    document.querySelector("#burger_button").textContent = "X";
+  }
 }
 
 async function getJson(file) {
@@ -86,6 +106,29 @@ function scrolling() {
 
   let ratio = scrollContainer.scrollTop / (scrollContainer.scrollHeight - scrollContainer.clientHeight);
   document.querySelector("#scroll_bar").style.left = ratio * 95 + "vw";
+
+  // show things when scrolled into view
+  const section2 = document.querySelector("#section2");
+  const section3 = document.querySelector("#section3");
+  console.log(scrollContainer.scrollTop);
+  console.log(section2.offsetTop - "100");
+
+  if (scrollContainer.scrollTop >= section2.offsetTop - "300") {
+    document.querySelector("#section2_about").classList.remove("hide");
+    document.querySelector("#section2_about p").classList.add("showopacity");
+    document.querySelector("#section2_about h3").classList.add("showopacity");
+    document.querySelector("#shape2").classList.add("showopacity");
+  }
+
+  if (scrollContainer.scrollTop >= section2.offsetTop) {
+    document.querySelector("#section2_skills").classList.remove("hide");
+    document.querySelector("#section2_skills svg").classList.add("showopacity");
+  }
+
+  if (scrollContainer.scrollTop >= section3.offsetTop - "300") {
+    document.querySelector("#works_container").classList.remove("transparent");
+    document.querySelector("#works_container").classList.add("showopacity2");
+  }
 }
 
 function moveMouse(e) {
@@ -142,4 +185,5 @@ function showMuseum() {
 function closeWork() {
   document.querySelector("#works_info").classList = "";
   document.querySelector("#works_info").classList.add("hideopacity");
+  document.querySelector("#works_info").classList.add("hide");
 }
