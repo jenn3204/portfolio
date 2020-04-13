@@ -68,7 +68,7 @@ header {
 
 nav {
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   z-index: 3000;
@@ -266,13 +266,13 @@ nav a:active {
 /** section 3 **/
 
 #section3 {
-  background-color: var(--colorthree);
+  background-color: var(--colortwo);
   width: 100vw;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 100px 0 100px 0;
+  padding-bottom: 20vh;
   flex-wrap: wrap;
 }
 
@@ -288,7 +288,7 @@ nav a:active {
 }
 
 #shape3 svg g path {
-  stroke: black;
+  stroke: var(--colorthree);
   stroke-width: 3;
 }
 
@@ -306,7 +306,7 @@ nav a:active {
 }
 
 .work:hover {
-  color: var(--colortwo);
+  color: var(--colorthree);
   cursor: pointer;
 }
 
@@ -320,15 +320,15 @@ nav a:active {
 }
 
 #knap {
-  border: 1px solid white;
+  border: 1px solid black;
   padding: 10px;
-  color: white;
+  color: black;
 }
 
 #knap:hover,
 #knap:active {
-  background-color: var(--colortwo);
-  color: black;
+  background-color: var(--colorone);
+  color: white;
 }
 
 /** footer **/
@@ -369,6 +369,10 @@ footer {
   #menu a {
     font-size: 1rem;
     margin: 0;
+  }
+
+  nav a:nth-child(1) {
+    padding: 10px;
   }
 
   #burger_button {
@@ -412,10 +416,6 @@ footer {
 
   #section2_skills svg {
     width: 600px;
-  }
-
-  #section3 {
-    height: 70vh;
   }
 
   #shape3 {
@@ -589,6 +589,6 @@ footer {
   }
   100% {
     opacity: 80%;
-    transform: translateY(-500px);
+    transform: translateY(-800px);
   }
 }
