@@ -428,6 +428,88 @@ footer {
   }
 }
 
+/** contact **/
+
+#contact {
+  background-color: var(--colortwo);
+  width: 100vw;
+  text-align: center;
+}
+
+#contact p {
+  width: 350px;
+  text-align: left;
+  margin: 0 auto 30px;
+}
+
+#contact a {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#contact a:hover {
+  text-decoration: none;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 400px;
+}
+
+label {
+  font-family: var(--headlinefont);
+  font-size: 16px;
+}
+
+input,
+textarea {
+  font-family: var(--mainfont);
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid var(--colorone);
+  margin-bottom: 10px;
+}
+
+input {
+  height: 25px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input:valid,
+textarea:valid {
+  background-color: #6cb87950;
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  background-color: #ac3c3150;
+}
+
+form button {
+  width: 150px;
+  margin: 0 125px 0 125px;
+  font-family: var(--headlinefont);
+  font-size: 16px;
+  background-color: #0f344599;
+  color: var(--colortwo);
+  cursor: pointer;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: var(--colorone);
+}
+
 /** classes **/
 
 .hide {
