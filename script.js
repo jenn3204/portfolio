@@ -97,10 +97,12 @@ function placeShapes(svg) {
   document.querySelector("#shape1").innerHTML = svg;
   document.querySelector("#shape2").innerHTML = svg;
   document.querySelector("#shape3").innerHTML = svg;
+  document.querySelector("#shape4").innerHTML = svg;
 
   document.querySelector("#shape1 svg g path").classList.add("bubbly");
   document.querySelector("#shape2 svg g path").classList.add("bubbly");
   document.querySelector("#shape3 svg g path").classList.add("bubbly");
+  document.querySelector("#shape4 svg g path").classList.add("bubbly");
 }
 
 function placeSkills(svg) {

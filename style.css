@@ -415,7 +415,7 @@ footer {
   }
 
   #section2_skills svg {
-    width: 600px;
+    width: 550px;
   }
 
   #shape3 {
@@ -434,12 +434,15 @@ footer {
   background-color: var(--colortwo);
   width: 100vw;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 #contact p {
   width: 350px;
   text-align: left;
   margin: 0 auto 30px;
+  z-index: 100;
 }
 
 #contact a {
@@ -460,11 +463,13 @@ form {
   flex-direction: column;
   text-align: left;
   height: 400px;
+  z-index: 100;
 }
 
 label {
   font-family: var(--headlinefont);
   font-size: 16px;
+  z-index: 100;
 }
 
 input,
@@ -474,6 +479,7 @@ textarea {
   border-radius: 2px;
   border: 1px solid var(--colorone);
   margin-bottom: 10px;
+  z-index: 100;
 }
 
 input {
@@ -504,10 +510,23 @@ form button {
   cursor: pointer;
   padding: 5px 0;
   border-radius: 5px;
+  z-index: 100;
 }
 
 form button:hover {
   background-color: var(--colorone);
+}
+
+#shape4 {
+  position: absolute;
+  top: 0;
+  width: 1500px;
+  pointer-events: none;
+}
+
+#shape4 svg g path {
+  stroke: var(--colorthree);
+  stroke-width: 1;
 }
 
 /** classes **/
