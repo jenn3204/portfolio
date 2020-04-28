@@ -33,7 +33,6 @@ function start() {
 
   getSvg("svg/shape.svg", placeShapes);
   getSvg("svg/skills.svg", placeSkills);
-  // getSvg("svg/arrow.svg", placeArrows);
   getSvg("svg/linkedin.svg", placeInLink);
   getSvg("svg/instagram.svg", placeInstaLink);
   getJson("data.json");
@@ -59,7 +58,6 @@ function checkScreenSize() {
 }
 
 function burgerMenu() {
-  // document.querySelector("#menu").classList.toggle("hidden");
   document.querySelector("#menu").classList.remove("hide");
   document.querySelector("#menu").classList.toggle("showopacity3");
   document.querySelector("#menu").classList.toggle("hideopacity2");
@@ -118,12 +116,6 @@ function placeSkills(svg) {
   document.querySelector("#photoshop").classList.add("wubbly");
   document.querySelector("#blue_shape").classList.add("wubbly");
 }
-
-// function placeArrows(svg) {
-//   document.querySelector("#arrow1").innerHTML = svg;
-
-//   document.querySelector("#arrow1").classList.add("pulse");
-// }
 
 function placeInstaLink(svg) {
   document.querySelector("#insta_logo").innerHTML = svg;
