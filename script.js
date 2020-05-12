@@ -16,9 +16,13 @@ function start() {
   document.querySelector("#section2_skills").classList.add("hide");
   document.querySelector("#works_container").classList.add("transparent");
 
-  document.querySelector("#burger_button").addEventListener("click", burgerMenu);
+  document
+    .querySelector("#burger_button")
+    .addEventListener("click", burgerMenu);
 
-  document.querySelector("#scroll_container").addEventListener("scroll", scrolling);
+  document
+    .querySelector("#scroll_container")
+    .addEventListener("scroll", scrolling);
   document.querySelector("#svg_blue").addEventListener("mousemove", moveMouse);
 
   document.querySelector("#section1").addEventListener("click", function () {
@@ -40,6 +44,8 @@ function start() {
   document.querySelector("#works_info").classList.add("hide");
   document.querySelector("#paaske").addEventListener("click", showPaaske);
   document.querySelector("#port").addEventListener("click", showPort);
+  document.querySelector("#green").addEventListener("click", showGreen);
+  document.querySelector("#fart").addEventListener("click", showFart);
   document.querySelector("#museum").addEventListener("click", showMuseum);
   document.querySelector("#close").addEventListener("click", closeWork);
 }
@@ -62,7 +68,9 @@ function burgerMenu() {
   document.querySelector("#menu").classList.toggle("showopacity3");
   document.querySelector("#menu").classList.toggle("hideopacity2");
 
-  let menuHidden = document.querySelector("#menu").classList.contains("hideopacity2");
+  let menuHidden = document
+    .querySelector("#menu")
+    .classList.contains("hideopacity2");
 
   if (menuHidden == true) {
     document.querySelector("#burger_button").textContent = "☰";
@@ -82,7 +90,8 @@ async function getJson(file) {
   let response = await fetch(file);
   jsonData = await response.json();
 
-  document.querySelector("#section2_about p").innerHTML = jsonData[3].describtion;
+  document.querySelector("#section2_about p").innerHTML =
+    jsonData[5].describtion;
 }
 
 async function getSvg(file, callback) {
@@ -129,7 +138,9 @@ function scrolling() {
   // scroll bar
   let scrollContainer = document.querySelector("#scroll_container");
 
-  let ratio = scrollContainer.scrollTop / (scrollContainer.scrollHeight - scrollContainer.clientHeight);
+  let ratio =
+    scrollContainer.scrollTop /
+    (scrollContainer.scrollHeight - scrollContainer.clientHeight);
   document.querySelector("#scroll_bar").style.left = ratio * 95 + "vw";
 
   // show things when scrolled into view
@@ -150,7 +161,7 @@ function scrolling() {
     document.querySelector("#section2_skills svg").classList.add("showopacity");
   }
 
-  if (scrollContainer.scrollTop >= section3.offsetTop - "300") {
+  if (scrollContainer.scrollTop >= section3.offsetTop - "500") {
     document.querySelector("#works_container").classList.remove("transparent");
     document.querySelector("#works_container").classList.add("showopacity2");
   }
@@ -158,8 +169,17 @@ function scrolling() {
 
 function moveMouse(e) {
   console.log("her");
-  document.querySelector("#clipCircle").setAttribute("cx", (e.pageX / window.innerWidth) * 1920);
-  document.querySelector("#clipCircle").setAttribute("cy", (e.pageY / window.innerHeight) * 1920 * (window.innerHeight / window.innerWidth));
+  document
+    .querySelector("#clipCircle")
+    .setAttribute("cx", (e.pageX / window.innerWidth) * 1920);
+  document
+    .querySelector("#clipCircle")
+    .setAttribute(
+      "cy",
+      (e.pageY / window.innerHeight) *
+        1920 *
+        (window.innerHeight / window.innerWidth)
+    );
   e.preventDefault();
 }
 
@@ -194,8 +214,7 @@ function showPort() {
   document.querySelector("#works_video").src = jsonData[1].movie;
 }
 
-function showMuseum() {
-  document.querySelector("#works_info").classList.add("hide");
+function showGreen() {
   document.querySelector("#works_info").classList = "";
   document.querySelector("#works_info").classList.add("showopacity");
 
@@ -208,6 +227,37 @@ function showMuseum() {
   document.querySelector("#works_info #knap").href = jsonData[2].link;
   document.querySelector("#works_info #video_link").href = jsonData[2].link;
   document.querySelector("#works_video").src = jsonData[2].movie;
+}
+
+function showFart() {
+  document.querySelector("#works_info").classList = "";
+  document.querySelector("#works_info").classList.add("showopacity");
+
+  if (window.innerWidth < "700") {
+    document.querySelector("#works_info").scrollIntoView();
+  }
+  document.querySelector("#works_info h3").textContent = jsonData[3].title;
+  document.querySelector("#works_info p").textContent = jsonData[3].describtion;
+  document.querySelector("#works_info #knap").textContent = jsonData[3].knap;
+  document.querySelector("#works_info #knap").href = jsonData[3].link;
+  document.querySelector("#works_info #video_link").href = jsonData[3].link;
+  document.querySelector("#works_video").src = jsonData[3].movie;
+}
+
+function showMuseum() {
+  document.querySelector("#works_info").classList.add("hide");
+  document.querySelector("#works_info").classList = "";
+  document.querySelector("#works_info").classList.add("showopacity");
+
+  if (window.innerWidth < "700") {
+    document.querySelector("#works_info").scrollIntoView();
+  }
+  document.querySelector("#works_info h3").textContent = jsonData[4].title;
+  document.querySelector("#works_info p").textContent = jsonData[4].describtion;
+  document.querySelector("#works_info #knap").textContent = jsonData[4].knap;
+  document.querySelector("#works_info #knap").href = jsonData[4].link;
+  document.querySelector("#works_info #video_link").href = jsonData[4].link;
+  document.querySelector("#works_video").src = jsonData[4].movie;
 }
 
 function closeWork() {

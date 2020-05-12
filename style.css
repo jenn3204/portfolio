@@ -295,7 +295,15 @@ nav a:active {
 .work {
   width: 200px;
   font-size: 1rem;
-  margin: 30px 0;
+  margin: 20px 0;
+}
+
+.work:hover::after {
+  content: "→";
+}
+
+.work:active::after {
+  content: "→";
 }
 
 #close {

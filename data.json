@@ -18,6 +18,20 @@
     "movie": "video/portfolio_video.mp4"
   },
   {
+    "title": "green homies",
+    "describtion": "green homies is a dynamic website about plants. I made this project on the second semester of my education. The aim was to create an informal website with a homey and cozy feeling, for people who love plants. ",
+    "knap": "Visit site",
+    "link": "https://jenniferjaque.dk/kea/2-semester/greenhomies/index.html",
+    "movie": "video/green_video.mp4"
+  },
+  {
+    "title": "'fart på livet' - campaign",
+    "describtion": "'fart på livet, sænk den i trafikken' (speed up in life, speed down in trafic) is a campaign that i did for Rådet for Sikker Trafik. The campaign consists of a campaign website and a campaign movie for the website and also for social media. The purpose of the campaign is to educate people about the consuquences of speeding in trafic, trying to prevent accidents caused by speeding.",
+    "knap": "vitit campaign site",
+    "link": "https://jenniferjaque.dk/kea/08-bd/fartpaalivet/",
+    "movie": "video/fart_video.mp4"
+  },
+  {
     "title": "museum of technology infoscreen",
     "describtion": "this is a project that i did for the danish museum of technology. it is an interactive infoscreen that shows the user how the invention of the light bulb has changed the world. the idea was to have this as a part of an exhibition at the museum about this topic. ",
     "knap": "try infoscreen",
