@@ -148,15 +148,16 @@ nav a:active {
 }
 
 #shape1 {
-  height: 50vh;
-  width: 50vw;
+  height: 60vh;
+  width: 60vw;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
 }
 
 #shape1 svg g path {
   stroke: black;
+  stroke-width: 2.5;
 }
 
 /** section 2 **/
@@ -299,11 +300,11 @@ nav a:active {
 }
 
 .work:hover::after {
-  content: "→";
+  content: "↓";
 }
 
 .work:active::after {
-  content: "→";
+  content: "↓";
 }
 
 #close {
@@ -434,6 +435,14 @@ footer {
   .work {
     width: 300px;
   }
+
+  .work:hover::after {
+    content: "→";
+  }
+
+  .work:active::after {
+    content: "→";
+  }
 }
 
 /** contact **/
@@ -537,7 +546,7 @@ form button:hover {
 
 #shape4 svg g path {
   stroke: var(--colorthree);
-  stroke-width: 1;
+  stroke-width: 0.5;
 }
 
 /** classes **/

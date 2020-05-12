@@ -102,12 +102,12 @@ async function getSvg(file, callback) {
 
 function placeShapes(svg) {
   document.querySelector("#shape1").innerHTML = svg;
-  document.querySelector("#shape2").innerHTML = svg;
+  // document.querySelector("#shape2").innerHTML = svg;
   document.querySelector("#shape3").innerHTML = svg;
   document.querySelector("#shape4").innerHTML = svg;
 
   document.querySelector("#shape1 svg g path").classList.add("bubbly");
-  document.querySelector("#shape2 svg g path").classList.add("bubbly");
+  // document.querySelector("#shape2 svg g path").classList.add("bubbly");
   document.querySelector("#shape3 svg g path").classList.add("bubbly");
   document.querySelector("#shape4 svg g path").classList.add("bubbly");
 }
@@ -123,7 +123,7 @@ function placeSkills(svg) {
   document.querySelector("#premiere").classList.add("wubbly");
   document.querySelector("#xd").classList.add("wubbly");
   document.querySelector("#photoshop").classList.add("wubbly");
-  document.querySelector("#blue_shape").classList.add("wubbly");
+  // document.querySelector("#blue_shape").classList.add("wubbly");
 }
 
 function placeInstaLink(svg) {
@@ -153,7 +153,7 @@ function scrolling() {
     document.querySelector("#section2_about").classList.remove("hide");
     document.querySelector("#section2_about p").classList.add("showopacity");
     document.querySelector("#section2_about h3").classList.add("showopacity");
-    document.querySelector("#shape2").classList.add("showopacity");
+    // document.querySelector("#shape2").classList.add("showopacity");
   }
 
   if (scrollContainer.scrollTop >= section2.offsetTop) {
@@ -263,4 +263,8 @@ function showMuseum() {
 function closeWork() {
   document.querySelector("#works_info").classList = "";
   document.querySelector("#works_info").classList.add("hideopacity");
+
+  if (window.innerWidth < "700") {
+    document.querySelector("#works_txt").scrollIntoView();
+  }
 }
